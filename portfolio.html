@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manasa | Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f7fc;
+            color: #222;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: 800;
+            font-size: 38px;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: #7b4bb7;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background: rgba(255,255,255,0.96);
+            box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand {
+            font-size: 25px;
+            font-weight: 800;
+            color: #7b4bb7 !important;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin-left: 15px;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #7b4bb7;
+        }
+
+
+        /* ================= HOME ================= */
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(circle at 10% 20%,
+                rgba(123,75,183,0.15),
+                transparent 30%),
+
+                radial-gradient(circle at 90% 80%,
+                rgba(30,144,255,0.12),
+                transparent 30%);
+
+            padding-top: 110px;
+        }
+
+        .hello {
+            color: #7b4bb7;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .hero-title {
+            font-size: 70px;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .hero-title span {
+            color: #7b4bb7;
+        }
+
+        .hero-subtitle {
+            font-size: 25px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            color: #666;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 20px 0 30px;
+        }
+
+        .btn-main {
+            background: #7b4bb7;
+            color: white;
+            border-radius: 30px;
+            padding: 12px 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            background: #633795;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid #7b4bb7;
+            color: #7b4bb7;
+            border-radius: 30px;
+            padding: 10px 24px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: #7b4bb7;
+            color: white;
+        }
+
+
+        /* ================= PROFILE PHOTO ================= */
+
+        .profile-box {
+            width: 370px;
+            height: 370px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+        }
+
+        .profile-photo {
+            width: 310px;
+            height: 310px;
+
+            object-fit: cover;
+            object-position: center top;
+
+            border-radius: 50%;
+            border: 8px solid white;
+
+            box-shadow:
+                0 20px 50px rgba(123,75,183,0.3);
+
+            position: relative;
+            z-index: 2;
+
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        .circle-one {
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            border: 3px solid #7b4bb7;
+            border-radius: 50%;
+
+            animation: rotate 12s linear infinite;
+        }
+
+        .circle-two {
+            position: absolute;
+
+            width: 330px;
+            height: 330px;
+
+            border: 2px dashed #4285f4;
+            border-radius: 50%;
+        }
+
+        @keyframes floating {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+        }
+
+        @keyframes rotate {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+
+            height: 100%;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .about-icon {
+            width: 60px;
+            height: 60px;
+
+            background: #eee5fa;
+            color: #7b4bb7;
+
+            border-radius: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        .skill-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            height: 100%;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .skill-icon {
+            font-size: 40px;
+            color: #7b4bb7;
+
+            margin-bottom: 12px;
+        }
+
+        .skill-card h5 {
+            font-weight: 600;
+        }
+
+        .progress {
+            height: 7px;
+            border-radius: 10px;
+            background: #eee;
+        }
+
+        .progress-bar {
+            background: linear-gradient(
+                90deg,
+                #7b4bb7,
+                #4285f4
+            );
+        }
+
+
+        /* ================= PROJECTS ================= */
+
+        .project-card {
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            height: 100%;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .project-top {
+            height: 140px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7b4bb7,
+                    #4285f4
+                );
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-top i {
+            font-size: 60px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h4 {
+            font-weight: 700;
+        }
+
+        .tech {
+            display: inline-block;
+
+            background: #eee5fa;
+
+            color: #7b4bb7;
+
+            padding: 6px 10px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            margin: 3px;
+        }
+
+
+        /* ================= EDUCATION ================= */
+
+        .education-card {
+            background: white;
+
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            border-left: 5px solid #7b4bb7;
+
+            border-radius: 0 18px 18px 0;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.06);
+        }
+
+
+        /* ================= ACHIEVEMENTS ================= */
+
+        .achievement-card {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            height: 100%;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .achievement-card i {
+            font-size: 50px;
+            color: #7b4bb7;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* ================= RESUME ================= */
+
+        .resume-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #7b4bb7,
+                    #4285f4
+                );
+
+            color: white;
+
+            padding: 60px 30px;
+
+            text-align: center;
+
+            border-radius: 25px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact-card {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+
+            margin-bottom: 22px;
+        }
+
+        .contact-item i {
+            font-size: 25px;
+            color: #7b4bb7;
+
+            margin-right: 15px;
+        }
+
+        .form-control {
+            padding: 13px;
+            border-radius: 10px;
+        }
+
+        .form-control:focus {
+            border-color: #7b4bb7;
+
+            box-shadow:
+                0 0 0 0.2rem rgba(123,75,183,0.15);
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #151515;
+            color: white;
+            padding: 35px 0;
+        }
+
+        .social a {
+            color: white;
+            font-size: 23px;
+            margin: 0 8px;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            color: #b99cff;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:768px) {
+
+            .hero-title {
+                font-size: 50px;
+                text-align: center;
+            }
+
+            .hero-subtitle,
+            .hero-description {
+                text-align: center;
+            }
+
+            .hero-buttons {
+                text-align: center;
+            }
+
+            .profile-box {
+                width: 290px;
+                height: 290px;
+                margin-top: 50px;
+            }
+
+            .profile-photo {
+                width: 245px;
+                height: 245px;
+            }
+
+            .circle-one {
+                width: 275px;
+                height: 275px;
+            }
+
+            .circle-two {
+                width: 260px;
+                height: 260px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            MANASA.
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">
+                        Education
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#achievements">
+                        Achievements
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+
+            <!-- TEXT -->
+
+            <div class="col-lg-7">
+
+                <p class="hello">
+                    HELLO, I'M
+                </p>
+
+                <h1 class="hero-title">
+                    <span>MANASA</span>
+                </h1>
+
+                <h3 class="hero-subtitle">
+
+                    Aspiring Data Analyst
+                    <br>
+
+                    <span style="color:#7b4bb7;">
+                        AI & ML Student
+                    </span>
+
+                </h3>
+
+
+                <p class="hero-description">
+
+                    I am a passionate Artificial Intelligence and
+                    Machine Learning student who enjoys working with
+                    data, solving problems and learning new technologies.
+
+                    My goal is to build a career in Data Analytics
+                    and turn data into meaningful insights.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#projects"
+                        class="btn-main me-2">
+
+                        <i class="bi bi-folder2-open"></i>
+
+                        View My Projects
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn-outline">
+
+                        <i class="bi bi-envelope"></i>
+
+                        Contact Me
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO -->
+
+            <div class="col-lg-5">
+
+                <div class="profile-box">
+
+                    <!-- YOUR PHOTO -->
+
+                    <img
+                        src="profile.jpg"
+                        alt="Manasa"
+                        class="profile-photo">
+
+
+                    <div class="circle-one"></div>
+
+                    <div class="circle-two"></div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            About <span>Me</span>
+
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-7">
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+
+                        <i class="bi bi-person"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Who I Am
+                    </h3>
+
+
+                    <p class="text-muted mt-3">
+
+                        I am Manasa, a B.Tech student specializing
+                        in Artificial Intelligence and Machine Learning.
+
+                        I am interested in Data Analytics, Python,
+                        problem solving and modern technology.
+
+                    </p>
+
+
+                    <p class="text-muted">
+
+                        I enjoy learning through practical projects
+                        and continuously improving my technical skills.
+
+                        I am currently working towards becoming a
+                        Data Analyst and building projects that
+                        demonstrate my ability to understand and
+                        work with data.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-5">
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+
+                        <i class="bi bi-mortarboard"></i>
+
+                    </div>
+
+
+                    <h4>
+                        Education
+                    </h4>
+
+
+                    <h5 class="mt-3">
+
+                        B.Tech – AI & ML
+
+                    </h5>
+
+
+                    <p class="text-muted">
+
+                        Bachelor of Technology
+
+                    </p>
+
+
+                    <p class="text-muted">
+
+                        Artificial Intelligence
+                        and Machine Learning
+
+                    </p>
+
+
+                    <span class="badge text-bg-primary">
+
+                        Currently Studying
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            My <span>Skills</span>
+
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <!-- Python -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-filetype-py"></i>
+
+                    </div>
+
+                    <h5>
+                        Python
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:75%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SQL -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-database"></i>
+
+                    </div>
+
+                    <h5>
+                        SQL
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:65%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Excel -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-file-earmark-spreadsheet"></i>
+
+                    </div>
+
+                    <h5>
+                        Excel
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:70%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Data Analysis -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-bar-chart"></i>
+
+                    </div>
+
+                    <h5>
+                        Data Analysis
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:65%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HTML CSS -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-code-slash"></i>
+
+                    </div>
+
+                    <h5>
+                        HTML & CSS
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:80%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Bootstrap -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-bootstrap"></i>
+
+                    </div>
+
+                    <h5>
+                        Bootstrap
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:75%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Java -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-cup-hot"></i>
+
+                    </div>
+
+                    <h5>
+                        Java
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:60%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- C -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-terminal"></i>
+
+                    </div>
+
+                    <h5>
+                        C
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:65%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DSA -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-diagram-3"></i>
+
+                    </div>
+
+                    <h5>
+                        Data Structures
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:60%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AI ML -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-robot"></i>
+
+                    </div>
+
+                    <h5>
+                        AI & ML
+                    </h5>
+
+                    <div class="progress mt-3">
+
+                        <div
+                            class="progress-bar"
+                            style="width:55%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            My <span>Projects</span>
+
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <i class="bi bi-bar-chart-fill"></i>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <h4>
+                            Student Academic Performance Analysis
+                        </h4>
+
+
+                        <p class="text-muted">
+
+                            A system designed to analyze student
+                            academic performance and identify students
+                            who may need additional academic support.
+
+                        </p>
+
+
+                        <span class="tech">
+                            Python
+                        </span>
+
+                        <span class="tech">
+                            Data Analysis
+                        </span>
+
+                        <span class="tech">
+                            SQL
+                        </span>
+
+
+                        <br><br>
+
+
+                        <a href="#"
+                           class="btn-outline">
+
+                            View Project
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <i class="bi bi-graph-up-arrow"></i>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <h4>
+                            Student Intervention & Progress Tracking System
+                        </h4>
+
+
+                        <p class="text-muted">
+
+                            A smart education concept that identifies
+                            struggling students, recommends learning
+                            resources and tracks their progress through
+                            assessments.
+
+                        </p>
+
+
+                        <span class="tech">
+                            Python
+                        </span>
+
+                        <span class="tech">
+                            AI & ML
+                        </span>
+
+                        <span class="tech">
+                            Bootstrap
+                        </span>
+
+
+                        <br><br>
+
+
+                        <a href="#"
+                           class="btn-outline">
+
+                            View Project
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <i class="bi bi-code-square"></i>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <h4>
+                            Python Mini Projects
+                        </h4>
+
+
+                        <p class="text-muted">
+
+                            A collection of beginner-friendly Python
+                            programs created to improve programming,
+                            logical thinking and problem-solving skills.
+
+                        </p>
+
+
+                        <span class="tech">
+                            Python
+                        </span>
+
+                        <span class="tech">
+                            Programming
+                        </span>
+
+
+                        <br><br>
+
+
+                        <a href="#"
+                           class="btn-outline">
+
+                            View Project
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <i class="bi bi-pie-chart-fill"></i>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <h4>
+                            Data Analysis Dashboard
+                        </h4>
+
+
+                        <p class="text-muted">
+
+                            An interactive dashboard concept for
+                            presenting data visually and helping users
+                            understand important trends and patterns.
+
+                        </p>
+
+
+                        <span class="tech">
+                            Excel
+                        </span>
+
+                        <span class="tech">
+                            SQL
+                        </span>
+
+                        <span class="tech">
+                            Data Analysis
+                        </span>
+
+
+                        <br><br>
+
+
+                        <a href="#"
+                           class="btn-outline">
+
+                            View Project
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            My <span>Education</span>
+
+        </h2>
+
+
+        <div class="education-card">
+
+            <small class="text-primary fw-bold">
+
+                CURRENTLY STUDYING
+
+            </small>
+
+
+            <h3 class="mt-3">
+
+                B.Tech – Artificial Intelligence & Machine Learning
+
+            </h3>
+
+
+            <h5 class="text-muted">
+
+                Bachelor of Technology
+
+            </h5>
+
+
+            <p class="mt-3">
+
+                Currently pursuing my B.Tech in Artificial Intelligence
+                and Machine Learning with an interest in Data Analytics,
+                Artificial Intelligence, Machine Learning and programming.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section id="achievements">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Certifications & <span>Achievements</span>
+
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="achievement-card">
+
+                    <i class="bi bi-award"></i>
+
+                    <h4>
+                        Certifications
+                    </h4>
+
+                    <p class="text-muted">
+
+                        Add your technical certifications,
+                        online courses and learning achievements here.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-4">
+
+                <div class="achievement-card">
+
+                    <i class="bi bi-trophy"></i>
+
+                    <h4>
+                        Hackathons
+                    </h4>
+
+                    <p class="text-muted">
+
+                        Add your hackathon participation,
+                        projects and awards here.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-4">
+
+                <div class="achievement-card">
+
+                    <i class="bi bi-stars"></i>
+
+                    <h4>
+                        Achievements
+                    </h4>
+
+                    <p class="text-muted">
+
+                        Add your academic achievements,
+                        competitions and other accomplishments here.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RESUME ================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="resume-box">
+
+            <i class="bi bi-file-earmark-person"
+               style="font-size:50px;">
+            </i>
+
+
+            <h2 class="mt-3">
+
+                Interested in knowing more about me?
+
+            </h2>
+
+
+            <p>
+
+                Download my resume to explore my
+                education, skills and projects.
+
+            </p>
+
+
+            <a href="resume.pdf"
+               download
+               class="btn btn-light rounded-pill px-4">
+
+                <i class="bi bi-download"></i>
+
+                Download Resume
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Contact <span>Me</span>
+
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <!-- CONTACT DETAILS -->
+
+            <div class="col-lg-5">
+
+                <div class="contact-card">
+
+                    <h3 class="mb-4">
+
+                        Let's Connect
+
+                    </h3>
+
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope"></i>
+
+                        <div>
+
+                            <strong>
+                                Email
+                            </strong>
+
+                            <p class="text-muted mb-0">
+
+                                your-email@example.com
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-linkedin"></i>
+
+                        <div>
+
+                            <strong>
+                                LinkedIn
+                            </strong>
+
+                            <p class="text-muted mb-0">
+
+                                linkedin.com/in/yourprofile
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-github"></i>
+
+                        <div>
+
+                            <strong>
+                                GitHub
+                            </strong>
+
+                            <p class="text-muted mb-0">
+
+                                github.com/yourusername
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        <div>
+
+                            <strong>
+                                Location
+                            </strong>
+
+                            <p class="text-muted mb-0">
+
+                                Andhra Pradesh, India
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="col-lg-7">
+
+                <div class="contact-card">
+
+                    <form
+                        onsubmit="alert('Thank you for contacting me!'); return false;">
+
+
+                        <div class="row">
+
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Your Name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Your Email"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Subject"
+                                required>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Message
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                rows="5"
+                                placeholder="Write your message..."
+                                required>
+                            </textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn-main border-0">
+
+                            <i class="bi bi-send"></i>
+
+                            Send Message
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container text-center">
+
+        <h4>
+            MANASA
+        </h4>
+
+
+        <p class="text-secondary">
+
+            Aspiring Data Analyst | AI & ML Student
+
+        </p>
+
+
+        <div class="social">
+
+            <a href="#">
+
+                <i class="bi bi-linkedin"></i>
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="bi bi-github"></i>
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="bi bi-envelope"></i>
+
+            </a>
+
+        </div>
+
+
+        <hr>
+
+
+        <small class="text-secondary">
+
+            © 2026 Manasa | All Rights Reserved
+
+        </small>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>
